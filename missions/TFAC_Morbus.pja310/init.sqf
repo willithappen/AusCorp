@@ -4,6 +4,12 @@ execVM "R3F_LOG\init.sqf";
 enableSaving [false, false];
 
 adv_aceCPR_quotient = 1;
+
+//Init Block
+[] spawn {
+  _chatCommands = execVM "WIH\chatCommands.sqf";
+}
+
 /*
 
 CAMERA = {
