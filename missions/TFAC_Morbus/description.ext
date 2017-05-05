@@ -1,0 +1,41 @@
+//------------------------- On Load									//
+onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
+onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
+briefingName = Morbus Deployment wk4;
+OnLoadName = "Morbus Deployment wk4";
+author="AusCorp, willithappen";
+
+
+class Header
+	{
+		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
+		minPlayers = 2;									// Min # of players the MISSION supports
+		maxPlayers = 56;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+	};
+
+//------------------------- Admin
+
+enableDebugConsole = 1;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
+// onPauseScript = "";
+
+//------------------------- Misc
+
+disableChannels[] = {0,2,3,4,5,6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
+disabledAI = 1;											// No AI in playable units
+aiKills = 0; 											// disable scorelist for AI players
+joinUnassigned = 1;										// 0 = players forced into role on join
+//------------------------- Respawn
+
+respawn = "BASE";
+respawnDelay = 5;
+respawnDialog = 0;
+respawnOnStart = -1;
+respawnTemplates[] = {"MenuPosition","Tickets","Spectator"};
+
+corpseLimit = 16;
+corpseRemovalMinTime = 30;
+corpseRemovalMaxTime = 120;
+wreckLimit = 16;
+
+#include "R3F_LOG\desc_include.h"
+// #include "LoadOutClasses.hpp"
